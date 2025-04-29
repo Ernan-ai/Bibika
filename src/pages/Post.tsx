@@ -1,97 +1,63 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import PostDetail from "../components/post";
-import { IPost } from "../types";
-import { getPost } from "../api/posts";
-import { useAuthStore } from "../store/useAuthStore.ts";
-import {
-    Alert,
-    Box,
-    Button,
-    CircularProgress,
-    Container,
-    Paper,
-    Typography,
-} from "@mui/material";
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { getDoc, doc } from 'firebase/firestore';
+import { db } from '../firebase';
+import { Button, Container, Box, Typography } from '@mui/material';
+import { getAuth } from 'firebase/auth';
 
-const PostPage = () => {
-    const { id } = useParams<{ id: string }>();
-    const navigate = useNavigate();
-    const [post, setPost] = useState<IPost | null>(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+const Post = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [post, setPost] = useState<any | null>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    const { user, profile } = useAuthStore();
+  useEffect(() => {
+    const user = getAuth().currentUser;
+    setIsAuthenticated(!!user);
 
-    useEffect(() => {
-        if (!user || profile?.role !== "user") {
-            setError("У вас недостаточно прав для просмотра этого поста.");
-        }
-    }, [user, profile]);
+    const fetchPost = async () => {
+      const docRef = doc(db, 'posts', id!);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        setPost(docSnap.data());
+      } else {
+        console.log('No such document!');
+      }
+    };
 
-    useEffect(() => {
-        const fetchPost = async () => {
-            if (!id || error) return;
-            setLoading(true);
-            try {
-                const data = await getPost(id);
-                if (data) {
-                    setPost(data);
-                } else {
-                    setError("Пост не найден");
-                }
-            } catch (err) {
-                console.error("Error fetching post:", err);
-                setError("Ошибка при загрузке поста");
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchPost();
-    }, [id, error]);
-    console.log("PostDetail received:", post);
+    fetchPost();
+  }, [id]);
 
-    return (
-        <Container maxWidth="md">
-            <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
-                <Typography variant="h4" component="h1" gutterBottom>
-                    Пост
-                </Typography>
+  const handleEdit = () => {
+    navigate(`/edit-post/${id}`);
+  };
 
-                {error && (
-                    <Alert severity="error" sx={{ mb: 2 }}>
-                        {error}
-                    </Alert>
-                )}
-
-                {loading && (
-                    <Box display="flex" justifyContent="center" my={4}>
-                        <CircularProgress />
-                    </Box>
-                )}
-
-                {!loading && !error && !post && (
-                    <Alert severity="info" sx={{ mb: 2 }}>
-                        Пост не найден
-                    </Alert>
-                )}
-
-                {!loading && !error && post && <PostDetail post={post} />}
-
-                <Box
-                    sx={{ mt: 3, display: "flex", justifyContent: "flex-end", gap: 2 }}
-                >
-                    <Button
-                        variant="outlined"
-                        onClick={() => navigate("/")}
-                        disabled={loading}
-                    >
-                        Назад
-                    </Button>
-                </Box>
-            </Paper>
-        </Container>
-    );
+  return (
+    <Container maxWidth="md">
+      <Box sx={{ mt: 4 }}>
+        {post ? (
+          <>
+            <Typography variant="h4">{post.title}</Typography>
+            <Typography variant="body1" sx={{ mt: 2 }}>
+              {post.content}
+            </Typography>
+            <Typography variant="body2" sx={{ mt: 2 }}>
+              Category: {post.category || 'Uncategorized'}
+            </Typography>
+            {isAuthenticated && (
+              <Button variant="contained" sx={{ mt: 2 }} onClick={handleEdit}>
+                Edit Post
+              </Button>
+            )}
+          </>
+        ) : (
+          <Typography variant="h6" align="center" color="error">
+            Loading post...
+          </Typography>
+        )}
+      </Box>
+    </Container>
+  );
 };
 
-export default PostPage;
+export default Post;

@@ -11,7 +11,7 @@ import Home from './pages/Home.tsx';
 import Profile from './pages/Profile.tsx';
 import { CreateProfile } from './pages/CreateProfile.tsx';
 import Post from './pages/Post.tsx';
-import SelectedPost from './pages/SelectedPost.tsx'; // Import SelectedPost
+import EditPost from './pages/EditPost';  
 
 const PrivateRoute = ({ element }: { element: ReactNode }) => {
   const { user } = useAuthStore();
@@ -32,7 +32,8 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<PrivateRoute element={<Posts />} />} />
           <Route path="/post" element={<PrivateRoute element={<Post />} />} />
-          <Route path="/post/:id" element={<PrivateRoute element={<SelectedPost />} />} /> {/* Added SelectedPost route */}
+          <Route path="/post/:id" element={<PrivateRoute element={<Post />} />} />
+          <Route path="/edit-post/:id" element={<PrivateRoute element={<EditPost />} />} /> 
           <Route path="/add-post" element={<PrivateRoute element={<CreatePost />} />} />
           <Route path="/login" element={<PublicRoute element={<Login />} />} />
           <Route path="/register" element={<PublicRoute element={<Register />} />} />

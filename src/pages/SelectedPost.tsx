@@ -5,33 +5,33 @@ import { db } from '../firebase';
 import { Button, Typography } from '@mui/material';
 
 const SelectedPost = () => {
-  const { id } = useParams(); // Get the 'id' from the URL
-  const [post, setPost] = useState<any>(null); // Store post data
-  const [loading, setLoading] = useState(true); // Loading state
+  const { id } = useParams(); 
+  const [post, setPost] = useState<any>(null); 
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchPost = async () => {
-      if (!id) return; // If no ID, don't fetch
+      if (!id) return; 
 
       try {
-        // Fetch post data from Firestore using the ID
+        
         const docRef = doc(db, 'posts', id);
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          setPost(docSnap.data()); // Set the post data
+          setPost(docSnap.data()); 
         } else {
           console.log('No such document!');
         }
       } catch (error) {
         console.error('Error fetching post: ', error);
       } finally {
-        setLoading(false); // Done loading
+        setLoading(false); 
       }
     };
 
     fetchPost();
-  }, [id]); // Re-run the effect when the 'id' changes
+  }, [id]); 
 
   if (loading) {
     return <Typography variant="h6" align="center">Loading...</Typography>;
