@@ -5,17 +5,21 @@ import { getFirestore } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+// Import the functions you need from the SDKs you need
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBzUuTfnTBoDEhX3a1HZNIj7Jj0daid0aw",
-  authDomain: "web-dd356.firebaseapp.com",
-  databaseURL: "https://web-dd356-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "web-dd356",
-  storageBucket: "web-dd356.firebasestorage.app",
-  messagingSenderId: "650619046249",
-  appId: "1:650619046249:web:374691d27e9897610615f8",
-  measurementId: "G-J11PF7QHCK"
+  apiKey: "AIzaSyDpZ-CHuzgXJIwkvN1lUwyDlftdBUnmOdM",
+  authDomain: "denchikpuhlyi.firebaseapp.com",
+  databaseURL: "https://denchikpuhlyi-default-rtdb.firebaseio.com",
+  projectId: "denchikpuhlyi",
+  storageBucket: "denchikpuhlyi.firebasestorage.app",
+  messagingSenderId: "904822185328",
+  appId: "1:904822185328:web:7ed50c4e6f04b1872cc3b5"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
