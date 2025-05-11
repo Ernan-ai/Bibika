@@ -12,7 +12,7 @@ import Profile from './pages/Profile.tsx';
 import { CreateProfile } from './pages/CreateProfile.tsx';
 import Post from './pages/Post.tsx';
 import EditPost from './pages/EditPost';  
-
+import CreateCategory from './pages/CreateCategory.tsx';
 const PrivateRoute = ({ element }: { element: ReactNode }) => {
   const { user } = useAuthStore();
   return user ? element : <Navigate to="/login" />;
@@ -30,6 +30,7 @@ export const App = () => {
       <Header />
       <Container sx={{ mt: 5 }}>
         <Routes>
+        <Route path="/create-category" element={<PrivateRoute element={<CreateCategory />} />} />
           <Route path="/" element={<PrivateRoute element={<Posts />} />} />
           <Route path="/post" element={<PrivateRoute element={<Post />} />} />
           <Route path="/post/:id" element={<PrivateRoute element={<Post />} />} />
