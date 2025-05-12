@@ -41,7 +41,7 @@ export const CreateProfile = () => {
       }
       navigate("/users");
     } catch {
-      setError("Произошла ошибка при создании пользователя");
+      setError("An error occurred while creating the user");
     }
   };
 
@@ -64,7 +64,7 @@ export const CreateProfile = () => {
     <Container maxWidth="sm">
       <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Создание нового пользователя
+        Creating a new user
         </Typography>
 
         {error && (
@@ -76,7 +76,7 @@ export const CreateProfile = () => {
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
           <TextField
             fullWidth
-            label="Имя"
+            label="name"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
@@ -86,7 +86,7 @@ export const CreateProfile = () => {
 
           <TextField
             fullWidth
-            label="Фамилия"
+            label="lastName"
             name="lastName"
             value={formData.lastName}
             onChange={handleInputChange}
@@ -102,8 +102,8 @@ export const CreateProfile = () => {
               label="Роль"
               onChange={handleSelectChange}
             >
-              <MenuItem value="user">Пользователь</MenuItem>
-              <MenuItem value="admin">Администратор</MenuItem>
+              <MenuItem value="user">User</MenuItem>
+              <MenuItem value="admin">Administrator</MenuItem>
             </Select>
           </FormControl>
 
@@ -111,10 +111,10 @@ export const CreateProfile = () => {
             sx={{ mt: 3, display: "flex", justifyContent: "flex-end", gap: 2 }}
           >
             <Button variant="outlined" onClick={() => navigate("/users")}>
-              Отмена
+            Cancel
             </Button>
             <Button type="submit" variant="contained" color="primary">
-              Создать
+            Create
             </Button>
           </Box>
         </Box>
