@@ -30,18 +30,18 @@ export const Profile = () => {
     return (
         <Container maxWidth="sm" sx={{ mt: 4 }}>
             <Typography variant="h4" gutterBottom>
-                Мой профиль
+                My profile
             </Typography>
             <Box sx={{ mb: 2 }}>
                 <Typography><strong>ID:</strong> {user.id}</Typography>
-                <Typography><strong>Имя:</strong> {user.name}</Typography>
+                <Typography><strong>Name:</strong> {user.name}</Typography>
                 <Typography><strong>Email:</strong> {user.email}</Typography>
             </Box>
             <Typography variant="h6" gutterBottom>
-                Редактировать данные
+            Edit data
             </Typography>
             <TextField
-                label="Имя"
+                label="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 fullWidth
@@ -55,7 +55,7 @@ export const Profile = () => {
                 margin="normal"
             />
             <Button variant="contained" onClick={handleUpdate} sx={{ mt: 2 }}>
-                Обновить
+            Update
             </Button>
         </Container>
     );
