@@ -9,6 +9,7 @@ import Menu from '@mui/material/Menu';
 import { useAuthStore } from '../store/useAuthStore.ts';
 import { Link, useNavigate } from 'react-router-dom';
 import { userSignOut } from '../firebase.ts';
+import { Margin, Padding } from '@mui/icons-material';
 
 export default function Header() {
     const navigate = useNavigate();
@@ -34,9 +35,10 @@ export default function Header() {
         <AppBar position="static">
             <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <div><img style={{marginRight: '10px'}} src= "./src/image.png" height={57} width={86}></img><div style={{marginBottom: '20px'}}><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
                         All posts
-                    </Link>
+                    </Link></div></div>
+                    
                 </Typography>
                 {user && (
                     <div>
