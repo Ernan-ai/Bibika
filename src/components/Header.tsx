@@ -10,7 +10,6 @@ import { useAuthStore } from '../store/useAuthStore.ts';
 import { Link, useNavigate } from 'react-router-dom';
 import { userSignOut } from '../firebase.ts';
 import { Box, Button } from '@mui/material';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 
 export default function Header() {
     const navigate = useNavigate();
@@ -37,7 +36,7 @@ export default function Header() {
             <Toolbar sx={{ justifyContent: 'space-between', py: 1 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <Box sx={{ 
-                        backgroundColor: '#2563eb', 
+                        backgroundColor: '#fffff', 
                         p: 1, 
                         borderRadius: 1, 
                         mr: 2,
@@ -45,33 +44,52 @@ export default function Header() {
                         alignItems: 'center',
                         justifyContent: 'center'
                     }}>
-                        <DirectionsCarIcon sx={{ color: 'white', fontSize: 32 }} />
+                        
+                        <Button 
+                        component={Link}
+                        to="/home"
+                        
+                        sx={{ 
+                            color: '#374151', 
+                            textTransform: 'none',
+                            fontSize: '16px',
+                            fontWeight: 500,
+                            '&:hover': { color: '#2563eb' }
+                        }}
+                        >
+                            <img src='./src/image.png' alt="Logo" style={{ width: '86px', height: '57px' }} />
+                        </Button>
                     </Box>
                 </Box>
 
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                    <Button 
-                        sx={{ 
-                            color: '#374151', 
-                            textTransform: 'none',
-                            fontSize: '16px',
-                            fontWeight: 500,
-                            '&:hover': { color: '#2563eb' }
-                        }}
-                    >
-                        Арендовать
-                    </Button>
-                    <Button 
-                        sx={{ 
-                            color: '#374151', 
-                            textTransform: 'none',
-                            fontSize: '16px',
-                            fontWeight: 500,
-                            '&:hover': { color: '#2563eb' }
-                        }}
-                    >
-                        Войти
-                    </Button>
+                <Button 
+        component={Link}
+        to="/register"
+        sx={{ 
+            color: '#374151', 
+            textTransform: 'none',
+            fontSize: '16px',
+            fontWeight: 500,
+            '&:hover': { color: '#2563eb' }
+        }}
+    >
+        Register
+    </Button>
+    <Button 
+        component={Link}
+        to="/login"
+        sx={{ 
+            color: '#374151', 
+            textTransform: 'none',
+            fontSize: '16px',
+            fontWeight: 500,
+            '&:hover': { color: '#2563eb' }
+        }}
+    >
+        Log In
+    </Button>
+
                 </Box>
                 
                 {user && (

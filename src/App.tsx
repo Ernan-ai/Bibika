@@ -31,7 +31,7 @@ export const App = () => {
       <Container sx={{ mt: 5 }}>
         <Routes>
         <Route path="/create-category" element={<PrivateRoute element={<CreateCategory />} />} />
-          <Route path="/" element={<PrivateRoute element={<Posts />} />} />
+          <Route path="/" element={<PrivateRoute element={<Home />} />} />
           <Route path="/post" element={<PrivateRoute element={<Post />} />} />
           <Route path="/post/:id" element={<PrivateRoute element={<Post />} />} />
           <Route path="/edit-post/:id" element={<PrivateRoute element={<EditPost />} />} /> 

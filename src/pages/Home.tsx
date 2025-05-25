@@ -27,7 +27,7 @@ const CarRentalLanding = () => {
     {
       id: 4,
       title: 'Премиум и бизнес',
-      image: 'https://images.unsplash.com/photo-1563720223185-61d6c6ded5cc?w=300&h=200&fit=crop',
+      image: 'https://car-images.bauersecure.com/wp-images/164826/1056x594/best_electric_luxury_car_bmw_i7.jpg',
       description: 'Роскошные автомобили для особых случаев'
     },
     {
