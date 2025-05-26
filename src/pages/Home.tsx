@@ -66,7 +66,7 @@ const CarRentalLanding = () => {
         </Box>
         
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-          {/* Small Car Icon */}
+          
           <Box sx={{ 
             display: 'inline-flex',
             alignItems: 'center',
@@ -302,8 +302,116 @@ const CarRentalLanding = () => {
           </Card>
         </Box>
       )}
-    </Box>
-  );
+
+      {/* Footer */}
+      <Box sx={{ backgroundColor: '#87CEEB', py: 6, mt: 8 }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={6}>
+            {/* О компании */}
+            <Grid item xs={12} md={3}>
+              <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 600, mb: 3 }}>
+                О компании
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  О проекте
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Правила сервиса
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Контакты
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Блог
+                </Typography>
+              </Box>
+            </Grid>
+
+            {/* Пользователям */}
+            <Grid item xs={12} md={3}>
+              <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 600, mb: 3 }}>
+                Пользователям
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Регионы России
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Пользовательское соглашение
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Политика конфиденциальности
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Sitemap
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Добавить объект
+                </Typography>
+              </Box>
+            </Grid>
+
+            {/* Chat Support */}
+            <Grid item xs={12} md={3}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                <Box 
+                  sx={{ 
+                    backgroundColor: '#1f2937', 
+                    color: 'white', 
+                    px: 3, 
+                    py: 1.5, 
+                    borderRadius: 2,
+                    cursor: 'pointer',
+                    fontWeight: 600,
+                    fontSize: '0.9rem',
+                    mb: 3,
+                    '&:hover': { backgroundColor: '#374151' }
+                  }}
+                >
+                  Чат\Задать вопрос
+                </Box>
+                <Typography variant="caption" sx={{ color: '#1f2937', mb: 1, fontSize: '0.8rem' }}>
+                  соцсети
+                </Typography>
+                <Box sx={{ display: 'flex', gap: 0.8 }}>
+                  <Box sx={{ width: 28, height: 28, backgroundColor: '#1e3a8a', borderRadius: 1 }}></Box>
+                  <Box sx={{ width: 28, height: 28, backgroundColor: '#1e3a8a', borderRadius: 1 }}></Box>
+                  <Box sx={{ width: 28, height: 28, backgroundColor: '#1e3a8a', borderRadius: 1 }}></Box>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* QR and App Downloads */}
+            <Grid item xs={12} md={3}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                <Box 
+                  sx={{ 
+                    width: 100, 
+                    height: 100, 
+                    backgroundColor: '#e5e7eb', 
+                    borderRadius: 2,
+                    mb: 2,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <Typography sx={{ color: '#6b7280', fontSize: '0.75rem', textAlign: 'center' }}>
+                    QR приложения
+                  </Typography>
+                </Box>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.85rem', mb: 0.5, '&:hover': { textDecoration: 'underline' } }}>
+                  Скачать Apple
+                </Typography>
+                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.85rem', '&:hover': { textDecoration: 'underline' } }}>
+                  Скачать Android
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
 };
 
 export default CarRentalLanding;

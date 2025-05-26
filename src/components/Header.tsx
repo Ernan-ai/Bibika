@@ -62,35 +62,37 @@ export default function Header() {
                     </Box>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                <Button 
-        component={Link}
-        to="/register"
-        sx={{ 
-            color: '#374151', 
-            textTransform: 'none',
-            fontSize: '16px',
-            fontWeight: 500,
-            '&:hover': { color: '#2563eb' }
-        }}
-    >
-        Register
-    </Button>
-    <Button 
-        component={Link}
-        to="/login"
-        sx={{ 
-            color: '#374151', 
-            textTransform: 'none',
-            fontSize: '16px',
-            fontWeight: 500,
-            '&:hover': { color: '#2563eb' }
-        }}
-    >
-        Log In
-    </Button>
+                {!user && (
+<Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+<Button 
+component={Link}
+to="/register"
+sx={{ 
+    color: '#374151', 
+    textTransform: 'none',
+    fontSize: '16px',
+    fontWeight: 500,
+    '&:hover': { color: '#2563eb' }
+}}
+>
+Register
+</Button>
+<Button 
+component={Link}
+to="/login"
+sx={{ 
+    color: '#374151', 
+    textTransform: 'none',
+    fontSize: '16px',
+    fontWeight: 500,
+    '&:hover': { color: '#2563eb' }
+}}
+>
+Log In
+</Button>
 
-                </Box>
+</Box>
+)}
                 
                 {user && (
                     <div>
