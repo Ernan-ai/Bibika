@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 
 const CarRentalLanding = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const navigate = useNavigate();
 
   const categories = [
     {
@@ -43,6 +45,10 @@ const CarRentalLanding = () => {
       description: 'Эксклюзивные автомобили для торжественных событий'
     }
   ];
+
+  const handleViewCars = () => {
+    navigate('/cars');
+  };
 
   return (
     <Box sx={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
@@ -296,6 +302,7 @@ const CarRentalLanding = () => {
                     backgroundColor: '#1d4ed8'
                   }
                 }}
+                onClick={handleViewCars}
               >
                 
                 Посмотреть автомобили

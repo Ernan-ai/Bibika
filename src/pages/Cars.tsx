@@ -1,0 +1,46 @@
+import React from 'react';
+import { Container, Typography, Box } from '@mui/material';
+
+const Cars = () => {
+  return (
+    <Container maxWidth="lg">
+      <Box sx={{ 
+        mt: 8, 
+        textAlign: 'center',
+        minHeight: '60vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        <Typography 
+          variant="h3" 
+          sx={{ 
+            fontWeight: 700,
+            color: '#1f2937',
+            mb: 3,
+            fontSize: { xs: '2rem', md: '2.5rem' }
+          }}
+        >
+          Каталог автомобилей
+        </Typography>
+        
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            color: '#6b7280',
+            maxWidth: '600px',
+            fontSize: '1.125rem',
+            fontWeight: 400,
+            lineHeight: 1.6
+          }}
+        >
+          Здесь будет отображаться каталог доступных автомобилей для аренды.
+          Страница находится в разработке.
+        </Typography>
+      </Box>
+    </Container>
+  );
+};
+
+export default Cars;
