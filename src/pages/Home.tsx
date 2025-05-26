@@ -364,22 +364,23 @@ const CarRentalLanding = () => {
           {/* Chat Support */}
           <Grid item xs={12} md={3}>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-              <Box 
-                sx={{ 
-                  backgroundColor: '#1f2937', 
-                  color: 'white', 
-                  px: 3, 
-                  py: 1.5, 
-                  borderRadius: 2,
-                  cursor: 'pointer',
-                  fontWeight: 600,
-                  fontSize: '0.9rem',
-                  mb: 4,
-                  '&:hover': { backgroundColor: '#374151' }
-                }}
-              >
-                Чат\Задать вопрос
-              </Box>
+            <Box 
+            sx={{ 
+              backgroundColor: '#1f2937', 
+              color: 'white', 
+              px: 3, 
+              py: 1.5, 
+              borderRadius: 2,
+              cursor: 'pointer',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              mb: 4,
+              '&:hover': { backgroundColor: '#374151' }
+            }}
+            onClick={() => navigate('/chat')}
+          >
+            Чат\Задать вопрос
+          </Box>
               <Typography variant="caption" sx={{ color: '#1f2937', mb: 2, fontSize: '0.9rem', alignSelf: 'center' }}>
                 соцсети
               </Typography>

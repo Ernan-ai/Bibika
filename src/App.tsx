@@ -5,6 +5,7 @@ import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { Container, CssBaseline } from '@mui/material';
 import { Posts } from './pages/Posts.tsx';
+import Chat from './pages/Chat.tsx';
 import { CreatePost } from './pages/CreatePost.tsx';
 import Header from './components/Header.tsx';
 import Home from './pages/Home.tsx';
@@ -32,7 +33,8 @@ export const App = () => {
       <Header />
       <Container sx={{ mt: 5 }}>
         <Routes>
-        <Route path="/create-category" element={<PrivateRoute element={<CreateCategory />} />} />
+          <Route path="/create-category" element={<PrivateRoute element={<CreateCategory />} />} />
+          <Route path="/chat" element={<PrivateRoute element={<Chat />} />} />
           <Route path="/" element={<PrivateRoute element={<Home />} />} />
           <Route path="/cars" element={<PrivateRoute element={<Cars />} />} />
           <Route path="/post" element={<PrivateRoute element={<Post />} />} />
