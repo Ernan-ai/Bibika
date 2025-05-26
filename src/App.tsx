@@ -12,7 +12,12 @@ import Profile from './pages/Profile.tsx';
 import { CreateProfile } from './pages/CreateProfile.tsx';
 import Post from './pages/Post.tsx';
 import EditPost from './pages/EditPost';  
-import Family from './pages/Family.tsx';
+import Family from './shahagey/Family.tsx';
+import Travel from './shahagey/Travel';
+import Economy from './shahagey/Economy';
+import Premium from './shahagey/Premium';
+import Offroad from './shahagey/Offroad';
+import Special from './shahagey/Special';
 
 const PrivateRoute = ({ element }: { element: ReactNode }) => {
   const { user } = useAuthStore();
@@ -31,6 +36,12 @@ export const App = () => {
       <Header />
       <Container sx={{ mt: 5 }}>
         <Routes>
+          <Route path="/family" element={<Family />} />
+          <Route path="/travel" element={<Travel />} />
+          <Route path="/economy" element={<Economy />} />
+          <Route path="/premium" element={<Premium />} />
+          <Route path="/offroad" element={<Offroad />} />
+          <Route path="/special" element={<Special />} />
           <Route path="/chat" element={<PrivateRoute element={<Chat />} />} />
           <Route path="/" element={<PrivateRoute element={<Home />} />} />
           <Route path="/family" element={<PrivateRoute element={<Family/>} />} />

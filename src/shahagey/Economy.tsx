@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 
-const Cars = () => {
+const Economy = () => {
   return (
     <Container maxWidth="lg">
       <Box sx={{ 
@@ -22,7 +22,7 @@ const Cars = () => {
             fontSize: { xs: '2rem', md: '2.5rem' }
           }}
         >
-          Available cars
+          Available economy cars
         </Typography>
         
         <Typography 
@@ -42,4 +42,4 @@ const Cars = () => {
   );
 };
 
-export default Cars;
+export default Economy;

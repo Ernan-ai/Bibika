@@ -12,54 +12,62 @@ const CarRentalLanding = () => {
       id: 1,
       title: 'Family SUVs',
       image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=300&h=200&fit=crop',
-      description: 'Просторные и комфортные автомобили для семейных поездок'
+      description: 'Spacious and comfortable cars for family trips'
     },
     {
       id: 2,
       title: 'Travel cars',
       image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=300&h=200&fit=crop',
-      description: 'Надежные автомобили для дальних путешествий'
+      description: 'Reliable cars for adventures'
     },
     {
       id: 3,
       title: 'Economy',
       image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&h=200&fit=crop',
-      description: 'Экономичные и доступные варианты'
+      description: 'Cheap and easy access cars'
     },
     {
       id: 4,
       title: 'Premium and business class',
       image: 'https://car-images.bauersecure.com/wp-images/164826/1056x594/best_electric_luxury_car_bmw_i7.jpg',
-      description: 'Роскошные автомобили для особых случаев'
+      description: 'Beautiful cars for your special occasions'
     },
     {
       id: 5,
       title: 'OffRoad',
       image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=300&h=200&fit=crop',
-      description: 'Мощные внедорожники для любых дорог'
+      description: 'Powerful Offroads for your trips'
     },
     {
       id: 6,
       title: 'Special occasions ',
       image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=300&h=200&fit=crop',
-      description: 'Эксклюзивные автомобили для торжественных событий'
+      description: 'Exclusive cars for your artistic needs '
     }
   ];
 
-  const handleViewCars = () => {
-    navigate('/cars');
+  const handleViewCars = (categoryId) => {
+    const routes = {
+      1: '/family',
+      2: '/travel', 
+      3: '/economy',
+      4: '/premium',
+      5: '/offroad',
+      6: '/special'
+    };
+    navigate(routes[categoryId] || '/cars');
   };
 
   return (
     <Box sx={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
-      {/* Hero Section with Blue Car Icon */}
+      
       <Box sx={{ 
         backgroundColor: 'white',
         py: 8,
         textAlign: 'center',
         position: 'relative'
       }}>
-        {/* Large Blue Car Icon */}
+        
         <Box sx={{ 
           position: 'absolute',
           top: '50%',
@@ -301,10 +309,10 @@ const CarRentalLanding = () => {
                     backgroundColor: '#1d4ed8'
                   }
                 }}
-                onClick={handleViewCars}
+                onClick={() => handleViewCars(selectedCategory.id)}
               >
                 
-                Look at our cars 
+                Available cars 
               </Box>
             </CardContent>
           </Card>

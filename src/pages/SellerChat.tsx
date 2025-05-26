@@ -21,12 +21,12 @@ interface Message {
   timestamp: Date;
 }
 
-const Chat = () => {
+const Msg = () => {
   const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Привет! Я помощник службы поддержки. Как я могу помочь вам сегодня?",
+      text: "Hey",
       isUser: false,
       timestamp: new Date()
     }
@@ -90,7 +90,7 @@ const Chat = () => {
           </Avatar>
           <Box>
             <Typography variant="h5" sx={{ fontWeight: 600, color: '#1f2937' }}>
-              Customer support
+              Seller
             </Typography>
             <Typography variant="body2" sx={{ color: '#6b7280' }}>
               Online • Usually responds within a few minutes 
@@ -246,4 +246,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default Msg;
