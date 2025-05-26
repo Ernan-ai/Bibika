@@ -18,6 +18,7 @@ import Economy from './shahagey/Economy';
 import Premium from './shahagey/Premium';
 import Offroad from './shahagey/Offroad';
 import Special from './shahagey/Special';
+import Seller from './pages/SellerChat.tsx'
 
 const PrivateRoute = ({ element }: { element: ReactNode }) => {
   const { user } = useAuthStore();
@@ -36,6 +37,7 @@ export const App = () => {
       <Header />
       <Container sx={{ mt: 5 }}>
         <Routes>
+          <Route path="/seller" element={<Seller />} />
           <Route path="/family" element={<Family />} />
           <Route path="/travel" element={<Travel />} />
           <Route path="/economy" element={<Economy />} />
@@ -44,7 +46,6 @@ export const App = () => {
           <Route path="/special" element={<Special />} />
           <Route path="/chat" element={<PrivateRoute element={<Chat />} />} />
           <Route path="/" element={<PrivateRoute element={<Home />} />} />
-          <Route path="/family" element={<PrivateRoute element={<Family/>} />} />
           <Route path="/post" element={<PrivateRoute element={<Post />} />} />
           <Route path="/post/:id" element={<PrivateRoute element={<Post />} />} />
           <Route path="/edit-post/:id" element={<PrivateRoute element={<EditPost />} />} /> 
