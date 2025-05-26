@@ -107,8 +107,6 @@ Log In
                                 </MenuItem>
                             )}
                             <MenuItem onClick={() => handleClose('/profile')}>Profile</MenuItem>
-                            <MenuItem onClick={() => handleClose('/add-post')}>Add post</MenuItem>
-                            <MenuItem onClick={() => handleClose('/create-category')}>Create Category</MenuItem>
                             <MenuItem onClick={logOut}>Log out</MenuItem>
                         </Menu>
                     </div>

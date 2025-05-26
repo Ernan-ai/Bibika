@@ -38,7 +38,6 @@ export const App = () => {
           <Route path="/add-post" element={<PrivateRoute element={<CreatePost />} />} />
           <Route path="/login" element={<PublicRoute element={<Login />} />} />
           <Route path="/register" element={<PublicRoute element={<Register />} />} />
-          <Route path="*" element={<Navigate to="/" />} />
           <Route path="/home" element={<PrivateRoute element={<Home />} />} />
           <Route path="/profile" element={<PrivateRoute element={<Profile />} />} />
           <Route path="/create-profile" element={<PrivateRoute element={<CreateProfile />} />} />

@@ -279,6 +279,7 @@ const CarRentalLanding = () => {
                 }}
               >
                 {selectedCategory.description}
+                
               </Typography>
               <Box
                 sx={{
@@ -296,6 +297,7 @@ const CarRentalLanding = () => {
                   }
                 }}
               >
+                
                 Посмотреть автомобили
               </Box>
             </CardContent>
