@@ -22,7 +22,7 @@ const Cars = () => {
             fontSize: { xs: '2rem', md: '2.5rem' }
           }}
         >
-          Каталог автомобилей
+          Available cars
         </Typography>
         
         <Typography 
@@ -35,8 +35,7 @@ const Cars = () => {
             lineHeight: 1.6
           }}
         >
-          Здесь будет отображаться каталог доступных автомобилей для аренды.
-          Страница находится в разработке.
+          Page in progress.
         </Typography>
       </Box>
     </Container>
