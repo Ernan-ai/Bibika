@@ -10,37 +10,37 @@ const CarRentalLanding = () => {
   const categories = [
     {
       id: 1,
-      title: 'Семейные авто',
+      title: 'Family SUVs',
       image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=300&h=200&fit=crop',
       description: 'Просторные и комфортные автомобили для семейных поездок'
     },
     {
       id: 2,
-      title: 'Машины для путешествий',
+      title: 'Travel cars',
       image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=300&h=200&fit=crop',
       description: 'Надежные автомобили для дальних путешествий'
     },
     {
       id: 3,
-      title: 'Эконом-класс',
+      title: 'Economy',
       image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&h=200&fit=crop',
       description: 'Экономичные и доступные варианты'
     },
     {
       id: 4,
-      title: 'Премиум и бизнес',
+      title: 'Premium and business class',
       image: 'https://car-images.bauersecure.com/wp-images/164826/1056x594/best_electric_luxury_car_bmw_i7.jpg',
       description: 'Роскошные автомобили для особых случаев'
     },
     {
       id: 5,
-      title: 'Внедорожники и кроссоверы',
+      title: 'OffRoad',
       image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=300&h=200&fit=crop',
       description: 'Мощные внедорожники для любых дорог'
     },
     {
       id: 6,
-      title: 'Машины для особых случаев (мероприятий)',
+      title: 'Special occasions ',
       image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=300&h=200&fit=crop',
       description: 'Эксклюзивные автомобили для торжественных событий'
     }
@@ -111,7 +111,7 @@ const CarRentalLanding = () => {
               lineHeight: 1.1
             }}
           >
-            Арендуй свою идеальную машину за минуту
+            Rent your ideal car 
           </Typography>
           
           <Typography 
@@ -126,9 +126,8 @@ const CarRentalLanding = () => {
               lineHeight: 1.6
             }}
           >
-            Платформа, которая соединяет владельцев авто и клиентов — быстро, удобно и безопасно.
-            От надёжных внедорожников до экономичных седанов — арендуй то, что подходит именно
-            тебе, без посредников и скрытых комиссий.
+            A platform that connects car owners and customers - fast, convenient and safe.
+            From reliable SUVs to economical sedans - rent what suits you, without intermediaries and hidden fees.
           </Typography>
         </Container>
       </Box>
@@ -145,7 +144,7 @@ const CarRentalLanding = () => {
             fontSize: { xs: '2rem', md: '2.5rem' }
           }}
         >
-          Популярные категории
+          Popular categories
         </Typography>
         
         <Grid container spacing={3}>
@@ -261,7 +260,7 @@ const CarRentalLanding = () => {
                 onClick={() => setSelectedCategory(null)}
               >
                 <Typography sx={{ color: '#6b7280', fontWeight: 'bold', fontSize: '1.25rem' }}>
-                  ×
+                  x
                 </Typography>
               </Box>
             </Box>
@@ -305,7 +304,7 @@ const CarRentalLanding = () => {
                 onClick={handleViewCars}
               >
                 
-                Посмотреть автомобили
+                Look at our cars 
               </Box>
             </CardContent>
           </Card>
@@ -319,20 +318,20 @@ const CarRentalLanding = () => {
           {/* О компании */}
           <Grid item xs={12} md={2.5}>
             <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 600, mb: 3 }}>
-              О компании
+              About us
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                О проекте
+                About our project
               </Typography>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Правила сервиса
+                Guidelines
               </Typography>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Контакты
+                Contacts
               </Typography>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Блог
+                About us 
               </Typography>
             </Box>
           </Grid>
@@ -340,23 +339,23 @@ const CarRentalLanding = () => {
           {/* Пользователям */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 600, mb: 3 }}>
-              Пользователям
+              For users
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Регионы России
+                Russian Regions
               </Typography>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Пользовательское соглашение
+                User agreements 
               </Typography>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Политика конфиденциальности
+                Confidentiality
               </Typography>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
                 Sitemap
               </Typography>
               <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Добавить объект
+                Add object
               </Typography>
             </Box>
           </Grid>
@@ -379,10 +378,10 @@ const CarRentalLanding = () => {
             }}
             onClick={() => navigate('/chat')}
           >
-            Чат\Задать вопрос
+            Customer support
           </Box>
               <Typography variant="caption" sx={{ color: '#1f2937', mb: 2, fontSize: '0.9rem', alignSelf: 'center' }}>
-                соцсети
+                Social media
               </Typography>
               <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', width: '100%' }}>
                 <Box sx={{ width: 32, height: 32, backgroundColor: '#1e3a8a', borderRadius: 1 }}></Box>
@@ -408,15 +407,15 @@ const CarRentalLanding = () => {
                 }}
               >
                 <Typography sx={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center', fontWeight: 500 }}>
-                  QR приложения
+                  QR app
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1.5 }}>
                 <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}>
-                  Скачать Apple
+                  Download Apple
                 </Typography>
                 <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}>
-                  Скачать Android
+                  Download Android
                 </Typography>
               </Box>
             </Box>
