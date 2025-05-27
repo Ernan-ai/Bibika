@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import AppleIcon from '@mui/icons-material/Apple';
+import AndroidIcon from '@mui/icons-material/Android';
+import QrCodeIcon from '@mui/icons-material/QrCode';
+import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 
@@ -320,116 +327,171 @@ const CarRentalLanding = () => {
       )}
 
       {/* Footer */}
-      <Box sx={{ backgroundColor: '#87CEEB', py: 6, mt: 8 }}>
-      <Container maxWidth="lg">
-        <Grid container spacing={8}>
-          {/* О компании */}
-          <Grid item xs={12} md={2.5}>
-            <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 600, mb: 3 }}>
-              About us
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                About our project
+      <Box sx={{ backgroundColor: '#87CEEB', py: 8, mt: 8 }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={6}>
+            {/* О компании */}
+            <Grid item xs={12} md={3}>
+              <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 700, mb: 3, fontSize: '1.1rem' }}>
+                О компании
               </Typography>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Guidelines
-              </Typography>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Contacts
-              </Typography>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                About us 
-              </Typography>
-            </Box>
-          </Grid>
-
-          {/* Пользователям */}
-          <Grid item xs={12} md={3}>
-            <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 600, mb: 3 }}>
-              For users
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Russian Regions
-              </Typography>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                User agreements 
-              </Typography>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Confidentiality
-              </Typography>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Sitemap
-              </Typography>
-              <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { textDecoration: 'underline' } }}>
-                Add object
-              </Typography>
-            </Box>
-          </Grid>
-
-          {/* Chat Support */}
-          <Grid item xs={12} md={3}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-            <Box 
-            sx={{ 
-              backgroundColor: '#1f2937', 
-              color: 'white', 
-              px: 3, 
-              py: 1.5, 
-              borderRadius: 2,
-              cursor: 'pointer',
-              fontWeight: 600,
-              fontSize: '0.9rem',
-              mb: 4,
-              '&:hover': { backgroundColor: '#374151' }
-            }}
-            onClick={() => navigate('/support')}
-          >
-            Customer support
-          </Box>
-              <Typography variant="caption" sx={{ color: '#1f2937', mb: 2, fontSize: '0.9rem', alignSelf: 'center' }}>
-                Social media
-              </Typography>
-              <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', width: '100%' }}>
-                <Box sx={{ width: 32, height: 32, backgroundColor: '#1e3a8a', borderRadius: 1 }}></Box>
-                <Box sx={{ width: 32, height: 32, backgroundColor: '#1e3a8a', borderRadius: 1 }}></Box>
-                <Box sx={{ width: 32, height: 32, backgroundColor: '#1e3a8a', borderRadius: 1 }}></Box>
-              </Box>
-            </Box>
-          </Grid>
-
-          {/* QR and App Downloads */}
-          <Grid item xs={12} md={3.5}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <Box 
-                sx={{ 
-                  width: 110, 
-                  height: 110, 
-                  backgroundColor: '#e5e7eb', 
-                  borderRadius: 2,
-                  mb: 3,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}
-              >
-                <Typography sx={{ color: '#6b7280', fontSize: '0.85rem', textAlign: 'center', fontWeight: 500 }}>
-                  QR app
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  О проекте
+                </Typography>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Правила сервиса
+                </Typography>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Контакты
+                </Typography>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Блог
                 </Typography>
               </Box>
-              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1.5 }}>
-                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}>
-                  Download Apple
+            </Grid>
+
+            {/* Пользователям */}
+            <Grid item xs={12} md={3}>
+              <Typography variant="h6" sx={{ color: '#1f2937', fontWeight: 700, mb: 3, fontSize: '1.1rem' }}>
+                Пользователям
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Регионы России
                 </Typography>
-                <Typography sx={{ color: '#1f2937', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}>
-                  Download Android
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Пользовательское соглашение
+                </Typography>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Политика конфиденциальности
+                </Typography>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Sitemap
+                </Typography>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                  Добавить объект
                 </Typography>
               </Box>
-            </Box>
+            </Grid>
+
+            {/* Support Button and Social */}
+            <Grid item xs={12} md={3}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 3 }}>
+                
+                <Box>
+                  <Typography variant="body2" sx={{ color: '#1f2937', mb: 2, fontSize: '0.9rem', fontWeight: 500 }}>
+                    соцсети
+                  </Typography>
+                  <Box sx={{ display: 'flex', gap: 1 }}>
+                    <Box sx={{ 
+                      width: 36, 
+                      height: 36, 
+                      backgroundColor: '#1e3a8a', 
+                      borderRadius: 1,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      '&:hover': { backgroundColor: '#1e40af' }
+                    }}>
+                      <FacebookIcon sx={{ color: 'white', fontSize: 20 }} />
+                    </Box>
+                    <Box sx={{ 
+                      width: 36, 
+                      height: 36, 
+                      backgroundColor: '#1e3a8a', 
+                      borderRadius: 1,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      '&:hover': { backgroundColor: '#1e40af' }
+                    }}>
+                      <TwitterIcon sx={{ color: 'white', fontSize: 20 }} />
+                    </Box>
+                    <Box sx={{ 
+                      width: 36, 
+                      height: 36, 
+                      backgroundColor: '#1e3a8a', 
+                      borderRadius: 1,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      '&:hover': { backgroundColor: '#1e40af' }
+                    }}>
+                      <InstagramIcon sx={{ color: 'white', fontSize: 20 }} />
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* QR and App Downloads */}
+            <Grid item xs={12} md={3}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+                  <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                      <Typography sx={{ 
+                        color: '#1f2937', 
+                        cursor: 'pointer', 
+                        fontSize: '0.9rem', 
+                        fontWeight: 500,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 1,
+                        '&:hover': { color: '#374151' }
+                      }}>
+                        <AppleIcon fontSize="small" />
+                        Скачать Apple
+                      </Typography>
+                      <Typography sx={{ 
+                        color: '#1f2937', 
+                        cursor: 'pointer', 
+                        fontSize: '0.9rem', 
+                        fontWeight: 500,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 1,
+                        '&:hover': { color: '#374151' }
+                      }}>
+                        <AndroidIcon fontSize="small" />
+                        Скачать Android
+                      </Typography>
+                    </Box>
+                    
+                    <Box 
+                      sx={{ 
+                        width: 120, 
+                        height: 120, 
+                        backgroundColor: '#f3f4f6', 
+                        borderRadius: 2,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 1,
+                        border: '2px solid #e5e7eb'
+                      }}
+                    >
+                      <QrCodeIcon sx={{ color: '#6b7280', fontSize: 32 }} />
+                      <Typography sx={{ 
+                        color: '#6b7280', 
+                        fontSize: '0.8rem', 
+                        textAlign: 'center', 
+                        fontWeight: 500 
+                      }}>
+                        QR приложения
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
+        </Container>
       </Box>
     </Box>
   );
