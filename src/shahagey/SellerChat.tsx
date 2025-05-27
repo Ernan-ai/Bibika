@@ -79,7 +79,7 @@ const Msg = () => {
       {/* Header */}
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
         <IconButton 
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/chats')}
           sx={{ mr: 2 }}
         >
           <ArrowBackIcon />
