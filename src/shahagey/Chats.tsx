@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { Container, Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar, Paper, Divider, IconButton, TextField, InputAdornment } from '@mui/material';
 import { Search, MoreVert, Circle } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
+import { Timestamp } from 'firebase/firestore';
 
 const Chats = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+  const handleChatClick = () => {
+    navigate('/seller');
+  };
 
   const chats = [
     {
       id: 1,
       name: 'Seller',
       lastMessage: 'Машина доступна на завтра?',
-      time: '14:30',
+      time: "13:22",
       avatar: 'A',
       unread: 2,
       online: true
@@ -114,17 +120,18 @@ const Chats = () => {
         <List sx={{ p: 0 }}>
           {filteredChats.map((chat, index) => (
             <React.Fragment key={chat.id}>
-              <ListItem
+                <ListItem
+                onClick={handleChatClick}
                 sx={{
-                  py: 2,
-                  px: 3,
-                  cursor: 'pointer',
-                  transition: 'background-color 0.2s ease',
-                  '&:hover': {
+                    py: 2,
+                    px: 3,
+                    cursor: 'pointer',
+                    transition: 'background-color 0.2s ease',
+                    '&:hover': {
                     backgroundColor: '#f9fafb'
-                  }
+                    }
                 }}
-              >
+                >
                 <ListItemAvatar>
                   <Box sx={{ position: 'relative' }}>
                     <Avatar 

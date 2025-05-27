@@ -384,7 +384,7 @@ const CarRentalLanding = () => {
               mb: 4,
               '&:hover': { backgroundColor: '#374151' }
             }}
-            onClick={() => navigate('/chat')}
+            onClick={() => navigate('/support')}
           >
             Customer support
           </Box>

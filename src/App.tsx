@@ -46,7 +46,7 @@ export const App = () => {
           <Route path="/premium" element={<Premium />} />
           <Route path="/offroad" element={<Offroad />} />
           <Route path="/special" element={<Special />} />
-          <Route path="/chat" element={<PrivateRoute element={<Chat />} />} />
+          <Route path="/support" element={<PrivateRoute element={<Chat />} />} />
           <Route path="/" element={<PrivateRoute element={<Home />} />} />
           <Route path="/post" element={<PrivateRoute element={<Post />} />} />
           <Route path="/post/:id" element={<PrivateRoute element={<Post />} />} />

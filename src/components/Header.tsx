@@ -101,13 +101,12 @@ Log In
                         </IconButton>
                         <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={() => setAnchorEl(null)}>
                             <MenuItem onClick={() => handleClose('/')}>Home</MenuItem>
-                            {!profile && (
-                                <MenuItem onClick={() => handleClose('/create-profile')}>
-                                    Create Profile
-                                </MenuItem>
-                            )}
+                            <MenuItem onClick={() => handleClose('/chats')}>Chats</MenuItem>
                             <MenuItem onClick={() => handleClose('/profile')}>Profile</MenuItem>
-                            <MenuItem onClick={logOut}>Log out</MenuItem>
+                            <MenuItem onClick={logOut} 
+                                sx={{color: 'red'}}
+                            >
+                            Log out</MenuItem>
                         </Menu>
                     </div>
                 )}
