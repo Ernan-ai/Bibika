@@ -11,7 +11,7 @@ const CarRentalLanding = () => {
     {
       id: 1,
       title: 'Family SUVs',
-      image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=300&h=200&fit=crop',
+      image: 'https://hips.hearstapps.com/hmg-prod/images/2020-lexus-gx460-101-1586193666.jpg?crop=1xw:1xh;center,top&resize=980:*',
       description: 'Spacious and comfortable cars for family trips'
     },
     {
@@ -23,7 +23,7 @@ const CarRentalLanding = () => {
     {
       id: 3,
       title: 'Economy',
-      image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&h=200&fit=crop',
+      image: 'https://images.hgmsites.net/med/2018-honda-fit_100612258_m.jpg',
       description: 'Cheap and easy access cars'
     },
     {
@@ -35,7 +35,7 @@ const CarRentalLanding = () => {
     {
       id: 5,
       title: 'OffRoad',
-      image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=300&h=200&fit=crop',
+      image: 'https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Wrangler/11675/1714043545186/front-left-side-47.jpg?tr=w-664',
       description: 'Powerful Offroads for your trips'
     },
     {

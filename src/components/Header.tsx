@@ -103,6 +103,7 @@ Log In
                             <MenuItem onClick={() => handleClose('/')}>Home</MenuItem>
                             <MenuItem onClick={() => handleClose('/chats')}>Chats</MenuItem>
                             <MenuItem onClick={() => handleClose('/profile')}>Profile</MenuItem>
+                            <MenuItem onClick={() => handleClose('/support')}>Customer support</MenuItem>
                             <MenuItem onClick={logOut} 
                                 sx={{color: 'red'}}
                             >

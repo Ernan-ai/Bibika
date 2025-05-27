@@ -8,31 +8,32 @@ const Special = () => {
     const navigate = useNavigate();
     
     const cars = [
-      {
-        id: 1,
-        title: 'Toyota 2016',
-        price: 'Договорная',
-        location: 'г.Бишкек',
-        image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=300&h=180&fit=crop',
-        description: 'Reliable and comfortable sedan for city driving'
-      },
-      {
-        id: 2,
-        title: 'Lexus 2021',
-        price: '130 $',
-        location: 'г.Бишкек',
-        image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=300&h=180&fit=crop',
-        description: 'Luxury SUV with premium features and comfort'
-      },
-      {
-        id: 3,
-        title: 'Toyota 2020',
-        price: '150$',
-        location: 'г.Бишкек',
-        image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=300&h=180&fit=crop',
-        description: 'Modern SUV perfect for family trips'
-      }
-    ];
+        {
+          id: 1,
+          title: 'Mercedes S-Class 2022',
+          price: '250 $',
+          location: 'г.Бишкек',
+          image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=300&h=180&fit=crop',
+          description: 'Premium luxury sedan with executive features, leather interior, and advanced comfort systems'
+        },
+        {
+          id: 2,
+          title: 'BMW 7 Series 2023',
+          price: '300 $',
+          location: 'г.Бишкек',
+          image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=300&h=180&fit=crop',
+          description: 'Ultimate luxury business sedan with massage seats, premium sound system, and chauffeur package'
+        },
+          {
+            id: 3,
+            title: 'Porsche Panamera 2023',
+            price: '400 $',
+            location: 'г.Бишкек',
+            image: 'https://hips.hearstapps.com/hmg-prod/images/2023-porsche-panamera-turbo-s-102-1671562605.jpg?crop=0.824xw:0.697xh;0.0814xw,0.139xh&resize=1200:*',
+            description: 'Sports luxury sedan combining performance with premium comfort and cutting-edge technology'
+          }
+
+      ];
   
     return (
       <Container maxWidth="lg">

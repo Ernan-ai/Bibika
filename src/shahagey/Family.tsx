@@ -10,28 +10,28 @@ const Family = () => {
     const cars = [
       {
         id: 1,
-        title: 'Toyota 2016',
+        title: 'Toyota RAV4 2019',
         price: 'Договорная',
         location: 'г.Бишкек',
-        image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=300&h=180&fit=crop',
-        description: 'Reliable and comfortable sedan for city driving'
+        image: 'https://cdn.motor1.com/images/mgl/2kkKM/s1/2019-toyota-rav4.webp',
+        description: 'Spacious and reliable SUV perfect for family adventures. All-wheel drive, excellent safety ratings, and comfortable seating for 5 passengers.'
       },
       {
         id: 2,
-        title: 'Lexus 2021',
+        title: 'Lexus GX 460 2021',
         price: '130 $',
         location: 'г.Бишкек',
-        image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=300&h=180&fit=crop',
-        description: 'Luxury SUV with premium features and comfort'
+        image: 'https://hips.hearstapps.com/hmg-prod/images/2020-lexus-gx460-101-1586193666.jpg?crop=1xw:1xh;center,top&resize=980:*',
+        description: 'Luxury full-size SUV with premium interior, advanced safety features, and superior off-road capabilities. Perfect for large families.'
       },
       {
         id: 3,
-        title: 'Toyota 2020',
+        title: 'Honda CR-V 2020',
         price: '150$',
         location: 'г.Бишкек',
-        image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=300&h=180&fit=crop',
-        description: 'Modern SUV perfect for family trips'
-      }
+        image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400&h=250&fit=crop&crop=center',
+        description: 'Compact SUV with excellent fuel economy, spacious cargo area, and Honda\'s renowned reliability. Ideal for daily commuting and weekend trips.'
+      },
     ];
   
     return (
