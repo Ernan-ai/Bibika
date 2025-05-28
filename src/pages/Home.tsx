@@ -336,16 +336,20 @@ const CarRentalLanding = () => {
                 О компании
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   О проекте
                 </Typography>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Правила сервиса
                 </Typography>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Контакты
                 </Typography>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Блог
                 </Typography>
               </Box>
@@ -357,19 +361,24 @@ const CarRentalLanding = () => {
                 Пользователям
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Регионы России
                 </Typography>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Пользовательское соглашение
                 </Typography>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Политика конфиденциальности
                 </Typography>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Sitemap
                 </Typography>
-                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}>
+                <Typography sx={{ color: '#374151', cursor: 'pointer', fontSize: '0.95rem', '&:hover': { color: '#1f2937' } }}
+                  onClick={() => navigate('/wip')}>
                   Добавить объект
                 </Typography>
               </Box>
@@ -378,6 +387,23 @@ const CarRentalLanding = () => {
             {/* Support Button and Social */}
             <Grid item xs={12} md={3}>
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 3 }}>
+                <Button
+                  variant="contained"
+                  sx={{ 
+                    backgroundColor: '#1f2937', 
+                    color: 'white', 
+                    px: 4, 
+                    py: 1.5, 
+                    borderRadius: 2,
+                    fontWeight: 600,
+                    fontSize: '0.9rem',
+                    textTransform: 'none',
+                    '&:hover': { backgroundColor: '#374151' }
+                  }}
+                  onClick={() => navigate('/wip')}
+                >
+                  Чат\Задать вопрос
+                </Button>
                 
                 <Box>
                   <Typography variant="body2" sx={{ color: '#1f2937', mb: 2, fontSize: '0.9rem', fontWeight: 500 }}>
@@ -394,7 +420,8 @@ const CarRentalLanding = () => {
                       justifyContent: 'center',
                       cursor: 'pointer',
                       '&:hover': { backgroundColor: '#1e40af' }
-                    }}>
+                    }}
+                    onClick={() => navigate('/wip')}>
                       <FacebookIcon sx={{ color: 'white', fontSize: 20 }} />
                     </Box>
                     <Box sx={{ 
@@ -407,7 +434,8 @@ const CarRentalLanding = () => {
                       justifyContent: 'center',
                       cursor: 'pointer',
                       '&:hover': { backgroundColor: '#1e40af' }
-                    }}>
+                    }}
+                    onClick={() => navigate('/wip')}>
                       <TwitterIcon sx={{ color: 'white', fontSize: 20 }} />
                     </Box>
                     <Box sx={{ 
@@ -420,7 +448,8 @@ const CarRentalLanding = () => {
                       justifyContent: 'center',
                       cursor: 'pointer',
                       '&:hover': { backgroundColor: '#1e40af' }
-                    }}>
+                    }}
+                    onClick={() => navigate('/wip')}>
                       <InstagramIcon sx={{ color: 'white', fontSize: 20 }} />
                     </Box>
                   </Box>
@@ -443,7 +472,8 @@ const CarRentalLanding = () => {
                         alignItems: 'center',
                         gap: 1,
                         '&:hover': { color: '#374151' }
-                      }}>
+                      }}
+                      onClick={() => navigate('/wip')}>
                         <AppleIcon fontSize="small" />
                         Скачать Apple
                       </Typography>
@@ -456,7 +486,8 @@ const CarRentalLanding = () => {
                         alignItems: 'center',
                         gap: 1,
                         '&:hover': { color: '#374151' }
-                      }}>
+                      }}
+                      onClick={() => navigate('/wip')}>
                         <AndroidIcon fontSize="small" />
                         Скачать Android
                       </Typography>
@@ -473,8 +504,11 @@ const CarRentalLanding = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         gap: 1,
-                        border: '2px solid #e5e7eb'
+                        border: '2px solid #e5e7eb',
+                        cursor: 'pointer',
+                        '&:hover': { backgroundColor: '#e5e7eb' }
                       }}
+                      onClick={() => navigate('/wip')}
                     >
                       <QrCodeIcon sx={{ color: '#6b7280', fontSize: 32 }} />
                       <Typography sx={{ 

@@ -20,6 +20,7 @@ import Offroad from './shahagey/Offroad';
 import Special from './shahagey/Special';
 import Seller from './shahagey/SellerChat.tsx'
 import Chats from './shahagey/Chats.tsx'
+import Wip from './shahagey/Wip.tsx'
 
 const PrivateRoute = ({ element }: { element: ReactNode }) => {
   const { user } = useAuthStore();
@@ -38,7 +39,8 @@ export const App = () => {
       <Header />
       <Container sx={{ mt: 5 }}>
         <Routes>
-        <Route path="/chats" element={<Chats />} />
+          <Route path="/wip" element={<Wip />} />
+          <Route path="/chats" element={<Chats />} />
           <Route path="/seller" element={<Seller />} />
           <Route path="/family" element={<Family />} />
           <Route path="/travel" element={<Travel />} />
